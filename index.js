@@ -3,7 +3,7 @@ require("dotenv").config()
 const sequelize = require("./database")
 const models = require('./models/model')
 const cors = require('cors')
-const routes_createDB = require('./routes/createDB/index')
+const routes_createDB = require('./routes/index')
 
 
 const http = require('http')
@@ -25,7 +25,7 @@ const start = async () => {
     try{
         await sequelize.authenticate()
         await sequelize.sync()
-        server.listen(PORT, HOST, () => console.log(`Server start on ${HOST}:${PORT}`))
+        server.listen(PORT,HOST,() => console.log(`Server start on ${HOST}:${PORT}`))
     }
     catch(e){
         console.log(e)
