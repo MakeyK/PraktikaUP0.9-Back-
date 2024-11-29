@@ -2,8 +2,6 @@ const { Sequelize } = require('../database')
 const { User } = require('../models/model')
 const ApiError = require('../ApiError')
 const { Op } = require("sequelize");
-const bcrypt = require('bcrypt')
-const uuid = require('uuid')
 const jwt = require('jsonwebtoken')
 
 const generateJwt = (login, password, email, phone, role) => {

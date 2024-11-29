@@ -20,7 +20,7 @@ const Request = sequelize.define('request', {
   desired_date_and_time: {type: DataTypes.DATE},
   adress: {type: DataTypes.STRING},
   payment_type: {type: DataTypes.STRING},
-  status_request: {type: DataTypes.STRING}
+  status_request: {type: DataTypes.STRING, defaultValue:'Принято'}
 }, {timestamps: false})
 
 User.hasMany(Request, {

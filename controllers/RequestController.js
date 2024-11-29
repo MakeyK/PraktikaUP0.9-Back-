@@ -27,7 +27,7 @@ class RequestController
     async getAll(req,res)
     {
         const request = await Request.findAll()
-        return res.json(request)
+        return res.json({request})
     }
     // Редактирование
     async RedId(req,res)
